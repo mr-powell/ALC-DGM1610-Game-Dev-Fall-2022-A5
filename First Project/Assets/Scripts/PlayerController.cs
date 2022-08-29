@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public string playerName = "Rob Boss";
-    
-    public int speed; // set speed value
-    public float hInput; // store horizontal input from keyboard
-    public float vInput; //store vertical input from keyboard
+        
+    public int speed; // Set speed value
+    public float rotSpeed; // Set rotation speed
+    public float hInput; // Store horizontal input from keyboard
+    public float vInput; //Store vertical input from keyboard
     
     // Update is called once per frame
     void Update()
@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
         // This is the code that moves the player
-        transform.Translate(Vector3.right * speed * hInput * Time.deltaTime);// Left and Right movement
-            
+        transform.Rotate(Vector3.up, rotSpeed * hInput * Time.deltaTime);
+        // Left and Right rotation            
         transform.Translate(Vector3.forward * speed * vInput * Time.deltaTime);//Forward and Backward movement
     }
 }
