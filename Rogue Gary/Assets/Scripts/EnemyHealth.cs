@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
@@ -11,7 +11,6 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       Time.timeScale = 1;
        currentHealth = maxHealth; 
     }
 
@@ -27,18 +26,9 @@ public class Health : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            Debug.Log("You are dead! Game Over!!");
-            Time.timeScale = 0;
-            //Destroy(gameObject,deathDelay);
+            Debug.Log("Enemy is dead!");            
+            Destroy(gameObject,deathDelay);
         }
     }
-    public void AddHealth(int healAmount)
-    {
-        currentHealth += healAmount;
-
-        if(currentHealth >= maxHealth)//Puts a cap on health amount
-        {
-            currentHealth = maxHealth;
-        }
-    }
+    
 }

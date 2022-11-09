@@ -22,16 +22,16 @@ public class PlayerAttack : MonoBehaviour
 
                 for(int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                 }
             }
 
-            attackDelay = startDelay;
+            attackDelay = startDelay;//Resetting the count
 
         }
         else
         {
-            attackDelay -= Time.deltaTime;
+            attackDelay -= Time.deltaTime;//Counting Down
         }
     }
 
