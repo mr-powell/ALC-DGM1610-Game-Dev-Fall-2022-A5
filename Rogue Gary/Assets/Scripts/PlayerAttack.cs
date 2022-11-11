@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(attackDelay <= 0 )
         {
-            if(Input.GetKey(KeyCode.Space))
+            if(Input.GetKey(KeyCode.F))
             {
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 

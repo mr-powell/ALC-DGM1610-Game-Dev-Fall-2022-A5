@@ -14,13 +14,6 @@ public class Health : MonoBehaviour
        Time.timeScale = 1;
        currentHealth = maxHealth; 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TakeDamage(int dmgAmount)
     {
         currentHealth -= dmgAmount;
