@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        //Lock and Disable Cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        
         //Get Components
         camera = Camera.main;
         rb = GetComponent<Rigidbody>();
