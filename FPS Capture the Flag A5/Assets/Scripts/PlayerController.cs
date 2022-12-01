@@ -71,4 +71,14 @@ public class PlayerController : MonoBehaviour
         if(Physics.Raycast(ray, 1.1f))
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
+
+    public void GiveHealth(int amount)
+    {
+        Debug.Log("Player picked up health!");
+    }
+
+    public void GiveAmmo(int amount)
+    {
+        Debug.Log("Player picked up ammo!");
+    }
 }
