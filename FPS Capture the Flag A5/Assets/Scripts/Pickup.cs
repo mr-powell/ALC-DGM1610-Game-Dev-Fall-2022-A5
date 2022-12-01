@@ -46,14 +46,11 @@ public class Pickup : MonoBehaviour
                 case PickupType.Ammo:
                 player.GiveAmmo(ammoAmount);
                 break;
-            }     
-
-
+            }  
             // Play pickup audio clip
            // other.GetComponent<AudioSource>().PlayOneShot(pickupSfx);
 
             Destroy(gameObject);            
-            
         }
     }
 
