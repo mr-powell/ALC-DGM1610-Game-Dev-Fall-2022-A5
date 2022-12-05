@@ -21,7 +21,7 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 offset = (isTracking == true ? new Vector3(0, 0, trackDistance / 2) : new Vector3(0, 0, -trackDistance /2));
+        Vector3 offset = (isTracking == true ? new Vector3(trackDistance / 2, 0, 0) : new Vector3(-trackDistance /2, 0, 0));
         transform.position = Vector3.MoveTowards(transform.position, startPos + offset, trackSpeed * Time.deltaTime);
 
         if(transform.position == startPos + offset)
