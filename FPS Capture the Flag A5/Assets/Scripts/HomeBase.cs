@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HomeBase : MonoBehaviour
 {
-    private GameObject flag;
     private GameManager gm;
     private Renderer flagRend;
 
@@ -15,14 +14,8 @@ public class HomeBase : MonoBehaviour
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         flagRend = GameObject.Find("FlagHome").GetComponent<Renderer>();
 
-        flagRend.enabled = false;
+        flagRend.enabled = false;//Hide the flag
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,7 +24,7 @@ public class HomeBase : MonoBehaviour
         {
             Debug.Log("Player has reached Homebase!");
             gm.PlaceFlag();
-            flagRend.enabled = true;
+            flagRend.enabled = true;//Show the flag
         }
     }
 }

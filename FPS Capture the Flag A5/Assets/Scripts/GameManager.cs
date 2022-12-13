@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         Debug.Log("You have won the game!");
-        Time.timeScale = 0;
+        //Time.timeScale = 0; //Freeze the game
     }
 
 }

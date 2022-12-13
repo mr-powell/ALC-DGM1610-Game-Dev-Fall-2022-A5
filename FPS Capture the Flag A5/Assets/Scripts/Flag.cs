@@ -12,13 +12,7 @@ public class Flag : MonoBehaviour
     {
        gm = GameObject.Find("GameManager").GetComponent<GameManager>(); //Find and reference GameManager
        rend = GetComponent<Renderer>();
-       rend.enabled = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+       rend.enabled = true;//Show the flag
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,8 +21,7 @@ public class Flag : MonoBehaviour
         {
             gm.hasFlag = true;
             Debug.Log("You have captured the flag!");
-            //this.gameObject.SetActive(false);
-            rend.enabled = false;
+            rend.enabled = false;//hide the flag
         }
     }
 }
